@@ -1,0 +1,7 @@
+v 0.1
+d Convert strings to datetime.
+d Mauricio Caceres Bravo, mauricio.caceres.bravo@gmail.com
+d
+d Support: email mauricio.caceres.bravo at gmail dot com
+f todatetime.ado
+f todatetime.sthlp
