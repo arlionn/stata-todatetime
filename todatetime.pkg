@@ -1,7 +1,13 @@
 v 0.1
-d Convert strings to datetime.
-d Mauricio Caceres Bravo, mauricio.caceres.bravo@gmail.com
 d
-d Support: email mauricio.caceres.bravo at gmail dot com
+p 'TODATETIME': Quick hack to convert stata strings to dates
+d
+d Convert strings to datetime.
+d
+d Distribution-Date: 20170209
+d
+d Author: Mauricio Caceres Bravo
+d Support: mauricio.caceres.bravo@gmail.com
+d
 f todatetime.ado
 f todatetime.sthlp
