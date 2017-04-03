@@ -38,6 +38,7 @@ program todatetime
     else local dt fromdt
 
     * Loop through date-time variables being converted
+    local fmtlist ""
     foreach datevar of varlist `datelist' {
         tempvar vdtm
         if ("`dt'" == "fromdt") {
@@ -57,17 +58,19 @@ program todatetime
             gettoken datetime generate: generate
             order `vdtm', after(`datevar')
             rename `vdtm' `datetime'
+            local fmtlist `fmtlist' `datetime'
         }
         else {
             order `vdtm', after(`datevar')
             label var `vdtm' "`variable label `datevar''"
             drop `datevar'
             rename `vdtm' `datevar'
+            local fmtlist `fmtlist' `datevar'
         }
     }
 
     * Apply display format if requested
     if ("`format'" != "") {
-        format `format' `datelist'
+        format `format' `fmtlist'
     }
 end
