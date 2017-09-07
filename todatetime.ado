@@ -47,7 +47,7 @@ program todatetime
         }
         else {
             * Uses date-time
-            gen `vdtm' = clock(`datevar', "`datefmt'")
+            gen double `vdtm' = clock(`datevar', "`datefmt'")
         }
 
         * dateonly should only be used if converting from date-time
